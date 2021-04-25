@@ -1,0 +1,1784 @@
+configuration:
+  min_stars: 25
+  require_github: True
+  markdown_header_file: "config/header.md"
+  markdown_footer_file: "config/footer.md"
+  projects_history_folder: "history"
+
+categories:
+  - category: "notebook-environments"
+    title: "Notebook Environments"
+    subtitle: "Development environments with support for Jupyter Notebooks."
+  - category: "widgets"
+    title: "Interactive Widgets & Visualization"
+    subtitle: "Extensions that provide interactive UI-widgets and visualization tools."
+  - category: "jupyter-extensions"
+    title: "Jupyter Extensions"
+    subtitle: "Application plugins that extend the functionality of Jupyter itself."
+  - category: "magic"
+    title: "Jupyter Magic"
+    subtitle: "Extensions that provide magic commands to access convenient functionality within a notebook."
+  - category: "kernels"
+    title: "Jupyter Kernels"
+    subtitle: "Jupyter kernels that run and introspect the user's code in a given language."
+  - category: "notebook-sharing"
+    title: "Notebook Sharing & Conversion"
+    subtitle: "Tools to share, convert and simplify collaboration (e.g., via git) with notebook files."
+  - category: "notebook-tools"
+    title: "Notebook Tools"
+    subtitle: "Libraries and tools that work with or can be used within notebook files."
+  - category: "lab-renderer"
+    title: "JupyterLab Renderer"
+    subtitle: "Extensions that can render and display files of specific MIME types."
+  - category: "lab-themes"
+    title: "JupyterLab Themes"
+    subtitle: "Extensions that can customize the appearance of JupyterLab."
+  - category: "lab-extensions"
+    title: "JupyterLab Extensions"
+    subtitle: "Application plugins that extend the functionality of JupyterLab itself."
+  - category: "hub-auth"
+    title: "JupyterHub Authenticators"
+    subtitle: "Authentication modules that manage and control how users can access the JupyterHub deployment."
+  - category: "hub-spawners"
+    title: "JupyterHub Spawners"
+    subtitle: "Spawner modules that start, monitor, and stop single-user notebook servers."
+  - category: "components"
+    title: "Jupyter Components"
+    subtitle: "Core components of the Jupyter architecture."
+
+projects:
+  # Notebook Environments
+  - name: Jupyter
+    show: True
+    pypi_id: notebook
+    github_id: jupyter/notebook
+    conda_id: conda-forge/jupyter
+    dockerhub_id: jupyter/datascience-notebook
+    category: notebook-environments
+  - name: JupyterHub
+    show: True
+    description: "Multi-user server for Jupyter notebooks."
+    pypi_id: jupyterhub
+    github_id: jupyterhub/jupyterhub
+    dockerhub_id: jupyterhub/jupyterhub
+    conda_id: conda-forge/jupyterhub
+    category: notebook-environments
+  - name: JupyterLab
+    show: True
+    description: "JupyterLab computational environment."
+    pypi_id: jupyterlab
+    github_id: jupyterlab/jupyterlab
+    conda_id: conda-forge/jupyterlab
+    category: notebook-environments
+  - name: ML Workspace
+    show: True
+    description: "All-in-one web-based IDE specialized for machine learning and.."
+    dockerhub_id: mltooling/ml-workspace
+    github_id: ml-tooling/ml-workspace
+    category: notebook-environments
+  - name: nteract
+    show: True
+    description: "The interactive computing suite for you!."
+    github_id: nteract/nteract
+    pypi_id: nteract_on_jupyter
+    category: notebook-environments
+  - name: Hydrogen
+    show: True
+    description: "Run code interactively, inspect data, and plot. All the power of Jupyter.."
+    github_id: nteract/hydrogen
+    category: notebook-environments
+  - name: Docker Stacks
+    show: True
+    description: "Ready-to-run Docker images containing Jupyter applications."
+    github_id: jupyter/docker-stacks
+    dockerhub_id: jupyter/scipy-notebook
+    license: BSD-3-Clause
+    category: notebook-environments
+  - name: DataLab
+    show: True
+    description: "Interactive tools and developer experiences for Big Data on.."
+    github_id: googledatalab/datalab
+    pypi_id: datalab
+    category: notebook-environments
+  - name: ML Hub
+    show: True
+    description: "Multi-user development platform for machine learning teams. Simple to.."
+    github_id: ml-tooling/ml-hub
+    dockerhub_id: mltooling/ml-hub
+    category: notebook-environments
+  # JupyterHub Spawners
+  - name: BatchSpawner
+    show: True
+    description: "Custom Spawner for Jupyterhub to start servers in batch scheduled.."
+    pypi_id: batchspawner
+    github_id: jupyterhub/batchspawner
+    category: hub-spawners
+  - name: DockerSpawner
+    show: True
+    description: "Spawns JupyterHub single user servers in Docker containers."
+    pypi_id: dockerspawner
+    github_id: jupyterhub/dockerspawner
+    conda_id: conda-forge/dockerspawner
+    category: hub-spawners
+  - name: KubeSpawner
+    show: True
+    pypi_id: jupyterhub-kubespawner
+    github_id: jupyterhub/kubespawner
+    category: hub-spawners
+  - name: FargateSpawner
+    show: True
+    pypi_id: fargatespawner
+    github_id: uktrade/fargatespawner
+    category: hub-spawners
+  - name: SystemdSpawner
+    show: True
+    description: "Spawn JupyterHub single-user notebook servers with systemd."
+    pypi_id: jupyterhub-systemdspawner
+    github_id: jupyterhub/systemdspawner
+    category: hub-spawners
+  - name: SudoSpawner
+    show: True
+    description: "Spawn JupyterHub single-user servers with sudo."
+    pypi_id: sudospawner
+    github_id: jupyterhub/sudospawner
+    category: hub-spawners
+  - name: YarnSpawner
+    show: True
+    description: "Spawn JupyterHub single user notebook servers in Hadoop/YARN.."
+    pypi_id: jupyterhub-yarnspawner
+    github_id: jupyterhub/yarnspawner
+    conda_id: conda-forge/jupyterhub-yarnspawner
+    category: hub-spawners
+  - name: WrapSpawner
+    show: True
+    description: "Mechanism for runtime configuration of spawners for JupyterHub."
+    github_id: jupyterhub/wrapspawner
+    category: hub-spawners
+  # JupyterHub Authenticators
+  - name: OAuthenticator
+    show: True
+    github_id: jupyterhub/oauthenticator
+    conda_id: conda-forge/oauthenticator
+    pypi_id: oauthenticator
+    category: hub-auth
+  - name: LDAP Authenticator
+    show: True
+    description: "LDAP Authenticator Plugin for Jupyter."
+    github_id: jupyterhub/ldapauthenticator
+    pypi_id: jupyterhub-ldapauthenticator
+    conda_id: conda-forge/jupyterhub-ldapauthenticator
+    category: hub-auth
+  - name: JWT Authenticator
+    show: True
+    description: "A Token Authenticator for JupyterHub."
+    github_id: mogthesprog/jwtauthenticator
+    pypi_id: jupyterhub-jwtauthenticator
+    category: hub-auth
+  - name: Native Authenticator
+    show: True
+    description: "JupyterHub-native user authenticator."
+    github_id: jupyterhub/nativeauthenticator
+    pypi_id: jupyterhub-nativeauthenticator
+    category: hub-auth
+  - name: Keberos Authenticator
+    show: True
+    description: "A JupyterHub authenticator using Kerberos."
+    github_id: jupyterhub/kerberosauthenticator
+    pypi_id: jupyterhub-kerberosauthenticator
+    category: hub-auth
+  - name: LTI Authenticator
+    show: True
+    description: "A JupyterHub authenticator for LTI."
+    github_id: jupyterhub/ltiauthenticator
+    pypi_id: jupyterhub-ltiauthenticator
+    category: hub-auth
+  - name: SSH Authenticator
+    show: True
+    description: "A simple SSH authenticator for JupyterHub."
+    github_id: andreas-h/sshauthenticator
+    category: hub-auth
+  - name: SAML Authenticator
+    show: True
+    description: "jupyterhub-samlauthenticator."
+    github_id: HewlettPackard/jupyterhub-samlauthenticator
+    pypi_id: jupyterhub-samlauthenticator
+    category: hub-auth
+  - name: CAS Authenticator
+    show: True
+    description: "CAS authenticator for Jupyterhub."
+    github_id: cwaldbieser/jhub_cas_authenticator
+    pypi_id: jhub_cas_authenticator
+    category: hub-auth
+  - name: Remote Authenticator
+    show: True
+    description: "A collection of JupyterHub Authenticators, including Header,.."
+    github_id: rasmunk/jhub-authenticators
+    pypi_id: jhub-authenticators
+    category: hub-auth
+  - name: Null Authenticator
+    show: True
+    github_id: jupyterhub/nullauthenticator
+    pypi_id: nullauthenticator
+    category: hub-auth
+  - name: First Use Authenticator
+    show: True
+    description: "JupyterHub Authenticator that lets users set.."
+    github_id: jupyterhub/firstuseauthenticator
+    pypi_id: jupyterhub-firstuseauthenticator
+    category: hub-auth
+  # Notebook Sharing & Conversion
+  - name: Voila
+    show: True
+    description: "Voil turns Jupyter notebooks into standalone web applications."
+    pypi_id: voila
+    github_id: voila-dashboards/voila
+    conda_id: conda-forge/voila
+    npm_id: "@jupyter-voila/jupyterlab-preview"
+    category: notebook-sharing
+  - name: nbviewer
+    show: True
+    description: "nbconvert as a web service: Render Jupyter Notebooks as static web.."
+    github_id: jupyter/nbviewer
+    dockerhub_id: jupyter/nbviewer
+    license: BSD-3-Clause
+    category: notebook-sharing
+  - name: commuter
+    show: True
+    description: "Notebook sharing hub."
+    github_id: nteract/commuter
+    npm_id: "@nteract/commuter"
+    category: notebook-sharing
+  - name: BinderHub
+    show: True
+    description: "Run your code in the cloud, with technology so advanced, it feels.."
+    github_id: jupyterhub/binderhub
+    pypi: binderhub
+    category: notebook-sharing
+  - name: nbgallery
+    show: True
+    description: "Enterprise Jupyter notebook sharing and collaboration app."
+    github_id: nbgallery/nbgallery
+    dockerhub_id: nbgallery/nbgallery
+    category: notebook-sharing
+  - name: Knowledge Repo
+    show: True
+    description: "A next-generation curated knowledge sharing platform for.."
+    github_id: airbnb/knowledge-repo
+    pypi_id: knowledge-repo
+    category: notebook-sharing
+  - name: nbconvert
+    show: True
+    pypi_id: nbconvert
+    github_id: jupyter/nbconvert
+    conda_id: conda-forge/nbconvert
+    category: notebook-sharing
+  - name: nbinteract
+    show: True
+    description: "Create interactive webpages from Jupyter Notebooks."
+    pypi_id: nbinteract
+    github_id: SamLau95/nbinteract
+    category: notebook-sharing
+  - name: RISE
+    show: True
+    description: "RISE: Live Reveal.js Jupyter/IPython Slideshow Extension."
+    pypi_id: RISE
+    github_id: damianavila/RISE
+    conda_id: conda-forge/rise
+    category: notebook-sharing
+  - name: Jupytext
+    show: True
+    description: "Jupyter Notebooks as Markdown Documents, Julia, Python or R scripts."
+    pypi_id: jupytext
+    github_id: mwouts/jupytext
+    npm_id: jupyterlab-jupytext
+    conda_id: conda-forge/jupytext
+    category: notebook-sharing
+  - name: nbdime
+    show: True
+    description: "Tools for diffing and merging of Jupyter notebooks."
+    pypi_id: nbdime
+    github_id: jupyter/nbdime
+    npm_id: nbdime-jupyterlab
+    conda_id: conda-forge/nbdime
+    category: notebook-sharing
+  - name: Jupyter Book
+    show: True
+    description: "Build interactive, publication-quality documents from Jupyter.."
+    pypi_id: jupyter-book
+    github_id: executablebooks/jupyter-book
+    category: notebook-sharing
+  - name: Stencila
+    show: True
+    description: "Living documents for reproducible research."
+    github_id: stencila/stencila
+    npm_id: stencila
+    dockerhub_id: stencila/cloud
+    category: notebook-sharing
+  - name: ThebeLab
+    show: True
+    description: "ThebeLab: turning static HTML pages into live documents."
+    github_id: executablebooks/thebe
+    category: notebook-sharing
+  - name: scrapbook
+    show: True
+    description: "A library for recording and reading data in notebooks."
+    github_id: nteract/scrapbook
+    pypi_id: nteract-scrapbook
+    category: notebook-sharing
+  # Jupyter Magic
+  - name: heat
+    show: True
+    description: "IPython magic command to profile and view your python code as a heat map."
+    github_id: csurfer/pyheatmagic
+    pypi_id: py-heat-magic
+    category: magic
+  - name: SQLCell
+    show: True
+    description: "SQLCell is a magic function for the Jupyter Notebook that executes raw,.."
+    github_id: tmthyjames/SQLCell
+    pypi_id: sqlcell
+    category: magic
+  - name: blackcellmagic
+    show: True
+    description: "IPython magic command to format python code in cell using.."
+    github_id: csurfer/blackcellmagic
+    pypi_id: blackcellmagic
+    category: magic
+  - name: jupyter-notify
+    show: True
+    github_id: ShopRunner/jupyter-notify
+    pypi_id: jupyternotify
+    category: magic
+  - name: watermark
+    show: True
+    description: "An IPython magic extension for printing date and time stamps, version.."
+    pypi_id: watermark
+    github_id: rasbt/watermark
+    conda_id: conda-forge/watermark
+    license: BSD-3-Clause
+    category: magic
+  - name: py_d3
+    show: True
+    pypi_id: py_d3
+    github_id: ResidentMario/py_d3
+    category: magic
+  - name: sparkmagic
+    show: True
+    description: "Jupyter magics and kernels for working with remote Spark clusters."
+    pypi_id: sparkmagic
+    github_id: jupyter-incubator/sparkmagic
+    conda_id: conda-forge/sparkmagic
+    category: magic
+  - name: ipython-sql
+    show: True
+    pypi_id: ipython-sql
+    github_id: catherinedevlin/ipython-sql
+    conda_id: conda-forge/ipython-sql
+    category: magic
+  - name: nb_black
+    show: True
+    pypi_id: nb_black
+    conda_id: conda-forge/nb_black
+    category: magic
+  # Jupyter Kernels
+  - name: Metakernel
+    show: True
+    description: "Jupyter/IPython Kernel Tools."
+    github_id: Calysto/metakernel
+    pypi_id: metakernel
+    conda_id: conda-forge/metakernel
+    category: kernels
+  - name: IRkernel
+    show: True
+    description: "R kernel for Jupyter."
+    github_id: IRkernel/IRkernel
+    cran_id: IRkernel
+    dockerhub_id: jupyter/r-notebook
+    conda_id: r/r-irkernel
+    license: MIT
+    category: kernels
+  - name: almond
+    show: True
+    description: "A Scala kernel for Jupyter."
+    github_id: almond-sh/almond
+    dockerhub_id: almondsh/almond
+    category: kernels
+  - name: xeus-cling
+    show: True
+    description: "Jupyter kernel for the C++ programming language."
+    github_id: jupyter-xeus/xeus-cling
+    conda_id: conda-forge/xeus-cling
+    category: kernels
+  - name: IJava
+    show: True
+    description: "A Jupyter kernel for executing Java code."
+    github_id: SpencerPark/IJava
+    category: kernels
+  - name: IElixir
+    show: True
+    description: "Jupyter's kernel for Elixir programming language."
+    github_id: pprzetacznik/IElixir
+    dockerhub_id: pprzetacznik/ielixir
+    hex_id: ielixir
+    category: kernels
+  - name: gophernotes
+    show: True
+    description: "The Go kernel for Jupyter notebooks and nteract."
+    github_id: gopherdata/gophernotes
+    dockerhub_id: gopherdata/gophernotes
+    go_id: github.com/gopherdata/gophernotes
+    category: kernels
+  - name: Bash Kernel
+    show: True
+    description: "A bash kernel for IPython."
+    github_id: takluyver/bash_kernel
+    pypi_id: bash_kernel
+    category: kernels
+  - name: clojupyter
+    show: True
+    description: "a Jupyter kernel for Clojure."
+    github_id: clojupyter/clojupyter
+    conda_id: simplect/clojupyter
+    dockerhub_id: simplect/clojupyter
+    category: kernels
+  - name: IJulia.jl
+    show: True
+    description: "Julia kernel for Jupyter."
+    github_id: JuliaLang/IJulia.jl
+    category: kernels
+  - name: IHaskell
+    show: True
+    description: "A Haskell kernel for IPython."
+    github_id: gibiansky/IHaskell
+    npm_id: ihaskell_jupyterlab
+    category: kernels
+  - name: Apache Toree
+    show: True
+    description: "Jupyter kernel for Apache Spark."
+    github_id: apache/incubator-toree
+    pypi_id: toree
+    description: "Jupyter kernel for Apache Spark."
+    category: kernels
+  - name: lgo
+    show: True
+    description: "Interactive Go programming with Jupyter."
+    github_id: yunabe/lgo
+    category: kernels
+  - name: IJavascript
+    show: True
+    description: "IJavascript is a javascript kernel for the Jupyter notebook."
+    github_id: n-riesco/ijavascript
+    npm_id: ijavascript
+    category: kernels
+  - name: IPython Kernel
+    show: True
+    github_id: ipython/ipykernel
+    pypi_id: ipykernel
+    conda_id: ipykernel
+    category: kernels
+  - name: Wolfram Kernel
+    show: True
+    description: "Wolfram Language kernel for Jupyter notebooks."
+    github_id: WolframResearch/WolframLanguageForJupyter
+    category: kernels
+  - name: Matlab Kernel
+    show: True
+    description: "Jupyter Kernel for Matlab."
+    github_id: calysto/matlab_kernel
+    pypi_id: matlab_kernel
+    category: kernels
+  - name: SSH Kernel
+    show: True
+    description: "SSH Kernel for Jupyter."
+    github_id: NII-cloud-operation/sshkernel
+    pypi_id: sshkernel
+    category: kernels
+  - name: Kernel Gateway
+    show: True
+    description: "Jupyter Kernel Gateway."
+    pypi_id: jupyter-kernel-gateway
+    github_id: jupyter/kernel_gateway
+    category: kernels
+  - name: remote_ikernel
+    show: True
+    github_id: tdaff/remote_ikernel
+    pypi_id: remote_ikernel
+    bitbucket_id: tdaff/remote_ikernel
+    category: kernels
+  - name: Enterprise Gateway
+    show: True
+    description: "A lightweight, multi-tenant, scalable and secure gateway.."
+    github_id: jupyter/enterprise_gateway
+    pypi_id: jupyter_enterprise_gateway
+    category: kernels
+  - name: Ansible Kernel
+    show: True
+    description: "Jupyter Notebook Kernel for running Ansible Tasks and.."
+    github_id: ansible/ansible-jupyter-kernel
+    pypi_id: ansible-kernel
+    dockerhub_id: benthomasson/ansible-jupyter-kernel
+    conda_id: conda-forge/ansible-kernel
+    category: kernels
+  - name: F# Kernel
+    show: True
+    github_id: fsprojects/IfSharp
+    dockerhub_id: fsprojects/ifsharp
+    category: kernels
+  - name: Octave Kernel
+    show: True
+    description: "An Octave kernel for IPython."
+    github_id: calysto/octave_kernel
+    pypi_id: octave_kernel
+    category: kernels
+  - name: OCaml Kernel
+    show: True
+    description: "An OCaml kernel for Jupyter (IPython) notebook."
+    github_id: akabe/ocaml-jupyter
+    category: kernels
+  - name: IRuby
+    show: True
+    description: "Official gem repository: Ruby kernel for Jupyter/IPython Notebook."
+    github_id: SciRuby/iruby
+    dockerhub_id: rubydata/datascience-notebook
+    gem_id: iruby
+    category: kernels
+  - name: ICSharp
+    show: True
+    description: "C# kernel for Jupyter."
+    github_id: zabirauf/icsharp
+    license: Apache-2.0
+    category: kernels
+  - name: LFortran
+    show: True
+    description: "Official mirror of https://gitlab.com/lfortran/lfortran. Please submit.."
+    github_id: lfortran/lfortran
+    pypi_id: lfortran
+    conda_id: conda-forge/lfortran
+    category: kernels
+  - name: SciJava Kernel
+    show: True
+    description: "Write SciJava scripts in Jupyter notebook!."
+    github_id: scijava/scijava-jupyter-kernel
+    conda_id: conda-forge/scijava-jupyter-kernel
+    category: kernels
+  - name: SAS Kernel
+    show: True
+    description: "A Jupyter kernel for SAS. This opens up all the data manipulation.."
+    github_id: sassoftware/sas_kernel
+    pypi_id: sas_kernel
+    category: kernels
+  - name: Spylon Kernel
+    show: True
+    github_id: Valassis-Digital-Media/spylon-kernel
+    pypi_id: spylon-kernel
+    conda_id: conda-forge/spylon-kernel
+    category: kernels
+  - name: Kernel Management
+    show: True
+    description: "Experimental new kernel management framework for Jupyter."
+    pypi_id: jupyter-kernel-mgmt
+    github_id: takluyver/jupyter_kernel_mgmt
+    category: notebook-tools
+  # Notebook Tools
+  - name: nbdev
+    show: True
+    description: "Create delightful python projects using Jupyter Notebooks."
+    pypi_id: nbdev
+    github_id: fastai/nbdev
+    category: notebook-tools
+  - name: BeakerX
+    show: True
+    description: "Beaker Extensions for Jupyter Notebook."
+    pypi_id: beakerx
+    github_id: twosigma/beakerx
+    npm_id: beakerx
+    dockerhub_id: beakerx/beakerx
+    conda_id: conda-forge/beakerx
+    category: notebook-tools
+  - name: treon
+    show: True
+    description: "Easy to use test framework for Jupyter Notebooks."
+    pypi_id: treon
+    github_id: ReviewNB/treon
+    category: notebook-tools
+  - name: PixieDust
+    show: True
+    description: "Python Helper library for Jupyter Notebooks."
+    pypi_id: pixiedust
+    github_id: pixiedust/pixiedust
+    conda_id: conda-forge/pixiedust
+    category: notebook-tools
+  - name: Jupyter Sphinx
+    show: True
+    description: "Sphinx extension for rendering of Jupyter interactive widgets."
+    pypi_id: jupyter_sphinx
+    github_id: jupyter/jupyter-sphinx
+    category: notebook-tools
+  - name: repo2docker
+    show: True
+    description: "Turn repositories into Jupyter-enabled Docker images."
+    pypi_id: jupyter-repo2docker
+    github_id: jupyterhub/repo2docker
+    category: notebook-tools
+  - name: JupyterWith
+    show: True
+    description: "declarative and reproducible Jupyter environments - powered by Nix."
+    github_id: tweag/jupyterWith
+    category: notebook-tools
+  - name: ipytest
+    show: True
+    description: "Pytest in IPython notebooks."
+    pypi_id: ipytest
+    github_id: chmp/ipytest
+    category: notebook-tools
+  - name: nbval
+    show: True
+    description: "A py.test plugin to validate Jupyter notebooks."
+    pypi_id: nbval
+    github_id: computationalmodelling/nbval
+    conda_id: conda-forge/nbval
+    category: notebook-tools
+  - name: sphinxcontrib.jupyter
+    show: True
+    description: "A Sphinx Extension for Generating Jupyter Notebooks."
+    pypi_id: sphinxcontrib-jupyter
+    github_id: QuantEcon/sphinxcontrib-jupyter
+    category: notebook-tools
+  - name: ipyexperiments
+    show: True
+    description: "jupyter/ipython experiment containers for GPU and general.."
+    pypi_id: ipyexperiments
+    github_id: stas00/ipyexperiments
+    category: notebook-tools
+  - name: jupyter2slides
+    show: True
+    description: "Cloud Native Presentation Slides with Jupyter Notebook +.."
+    github_id: datitran/jupyter2slides
+    category: notebook-tools
+  - name: Jupyter Client
+    show: True
+    github_id: jupyter/jupyter_client
+    pypi_id: jupyter-client
+    license: BSD-3-Clause
+    category: notebook-tools
+  - name: Jupyter Helpers
+    show: True
+    description: "A collection of helpers for Jupyter/IPython."
+    github_id: krassowski/jupyter-helpers
+    pypi_id: jupyter_helpers
+    category: notebook-tools
+  - name: ipyparallel
+    show: True
+    description: "Interactive Parallel Computing in Python."
+    pypi_id: ipyparallel
+    github_id: ipython/ipyparallel
+    conda_id: conda-forge/ipyparallel
+    category: notebook-tools
+  # Interactive Widgets & Visualization
+  - name: pandas-profiling
+    show: True
+    description: "Create HTML profiling reports from pandas DataFrame.."
+    pypi_id: pandas-profiling
+    github_id: pandas-profiling/pandas-profiling
+    conda_id: conda-forge/pandas-profiling
+    category: widgets
+  - name: facets-overview
+    show: True
+    description: "Visualizations for machine learning datasets."
+    pypi_id: facets-overview
+    github_id: pair-code/facets
+    category: widgets
+  - name: pivottablejs
+    show: True
+    description: "Dragndrop Pivot Tables and Charts for Jupyter/IPython Notebook,.."
+    pypi_id: pivottablejs
+    github_id: nicolaskruchten/jupyter_pivottablejs
+    category: widgets
+  - name: Vision UI
+    show: True
+    description: "UI visual interface for fastai - now compatible with Google.."
+    github_id: asvcode/Vision_UI
+    category: widgets
+  - name: ipywidgets
+    show: True
+    pypi_id: ipywidgets
+    github_id: jupyter-widgets/ipywidgets
+    conda_id: conda-forge/ipywidgets
+    npm_id: "@jupyter-widgets/jupyterlab-manager"
+    category: widgets
+  - name: qgrid
+    show: True
+    description: "An interactive grid for sorting, filtering, and editing DataFrames.."
+    pypi_id: qgrid
+    npm_id: qgrid
+    github_id: quantopian/qgrid
+    conda_id: conda-forge/qgrid
+    category: widgets
+  - name: ipyaggrid
+    show: True
+    description: "Jupyter widget - ag-grid in the notebook."
+    pypi_id: ipyaggrid
+    github_id: DGothrek/ipyaggrid
+    npm_id: ipyaggrid
+    category: widgets
+  - name: jupyter-matplotlib
+    show: True
+    description: "Matplotlib Jupyter Integration."
+    pypi_id: ipympl
+    github_id: matplotlib/ipympl
+    npm_id: jupyter-matplotlib
+    category: widgets
+  - name: ipysheet
+    show: True
+    description: "Jupyter handsontable integration."
+    pypi_id: ipysheet
+    github_id: QuantStack/ipysheet
+    npm_id: ipysheet
+    conda_id: conda-forge/ipysheet
+    category: widgets
+  - name: papermill
+    show: True
+    description: "Parameterize, execute, and analyze notebooks."
+    pypi_id: papermill
+    github_id: nteract/papermill
+    conda_id: conda-forge/papermill
+    category: widgets
+  - name: ipysigma
+    show: True
+    description: "A custom Jupyter widget library to display graphs using sigma.js."
+    github_id: Yomguithereal/ipysigma
+    npm_id: ipysigma
+    pypi_id: ipysigma
+    category: widgets
+  - name: ipymaterialui
+    show: True
+    description: "Jupyter Widgets based on React Material UI components."
+    github_id: maartenbreddels/ipymaterialui
+    npm_id: jupyter-materialui
+    pypi_id: ipymaterialui
+    category: widgets
+  - name: tributary
+    show: True
+    description: "Streaming reactive and dataflow graphs in Python."
+    github_id: timkpaine/tributary
+    pypi_id: tributary
+    conda_id: conda-forge/tributary
+    category: widgets
+  - name: ipywebrtc
+    show: True
+    description: "WebRTC for Jupyter notebook/lab."
+    github_id: maartenbreddels/ipywebrtc
+    pypi_id: ipywebrtc
+    npm_id: jupyter-webrtc
+    conda_id: conda-forge/ipywebrtc
+    category: widgets
+  - name: ipyvolume
+    show: True
+    description: "3d plotting for Python in the Jupyter notebook based on IPython.."
+    pypi_id: ipyvolume
+    github_id: maartenbreddels/ipyvolume
+    conda_id: conda-forge/ipyvolume
+    npm_id: ipyvolume
+    category: widgets
+  - name: bqplot
+    show: True
+    description: "Plotting library for IPython/Jupyter notebooks."
+    pypi_id: bqplot
+    github_id: bqplot/bqplot
+    npm_id: bqplot
+    conda_id: conda-forge/bqplot
+    category: widgets
+  - name: pythreejs
+    show: True
+    description: "A Jupyter - Three.js bridge."
+    pypi_id: pythreejs
+    github_id: jupyter-widgets/pythreejs
+    conda_id: conda-forge/pythreejs
+    npm_id: jupyter-threejs
+    category: widgets
+  - name: itkwidgets
+    show: True
+    description: "Interactive Jupyter widgets to visualize images, point sets, and.."
+    pypi_id: itkwidgets
+    github_id: InsightSoftwareConsortium/itkwidgets
+    npm_id: itkwidgets
+    category: widgets
+  - name: Mapbox GL
+    show: True
+    description: "Use Mapbox GL JS to visualize data in a Python Jupyter notebook."
+    github_id: mapbox/mapboxgl-jupyter
+    pypi_id: mapboxgl
+    category: widgets
+  - name: ipyleaflet
+    show: True
+    description: "A Jupyter - Leaflet.js bridge."
+    pypi_id: ipyleaflet
+    github_id: jupyter-widgets/ipyleaflet
+    conda_id: conda-forge/ipyleaflet
+    npm_id: jupyter-leaflet
+    category: widgets
+  - name: gmaps
+    show: True
+    description: "Google maps for Jupyter notebooks."
+    pypi_id: gmaps
+    github_id: pbugnion/gmaps
+    npm_id: jupyter-gmaps
+    conda_id: conda-forge/gmaps
+    license: BSD-3-Clause
+    category: widgets
+  - name: ipyp5
+    show: True
+    description: "p5.js Jupyter Widget."
+    pypi_id: ipyp5
+    github_id: jtpio/ipyp5
+    category: widgets
+  - name: ipytree
+    show: True
+    description: "A Tree Widget using Jupyter-widgets protocol and jsTree."
+    pypi_id: ipytree
+    github_id: QuantStack/ipytree
+    conda_id: conda-forge/ipytree
+    category: widgets
+  - name: niwidgets
+    show: True
+    description: "Neuroimaging widgets for jupyter notebooks."
+    pypi_id: niwidgets
+    github_id: nipy/niwidgets
+    license: Apache-2.0
+    category: widgets
+  - name: igv.js widget
+    show: True
+    description: "Extension for Jupyter Notebook which integrates igv.js."
+    pypi_id: igv-jupyter
+    github_id: igvteam/igv-jupyter
+    category: widgets
+  - name: perfume
+    show: True
+    description: "Interactive performance benchmarking in Jupyter."
+    pypi_id: perfume-bench
+    github_id: leifwalsh/perfume
+    category: widgets
+  - name: vega
+    show: True
+    description: "IPython/Jupyter notebook module for Vega and Vega-Lite."
+    pypi_id: vega
+    github_id: vega/ipyvega
+    conda_id: conda-forge/vega
+    category: widgets
+  - name: geonotebook
+    show: True
+    description: "A Jupyter notebook extension for geospatial visualization and.."
+    github_id: OpenGeoscience/geonotebook
+    dockerhub_id: geonotebook/geonotebook
+    category: widgets
+  - name: panel
+    show: True
+    description: "A high-level app and dashboarding solution for Python."
+    github_id: holoviz/panel
+    pypi_id: panel
+    conda_id: conda-forge/panel
+    category: widgets/dashboarding
+  - name: Jupyter DataTables
+    show: True
+    description: "Jupyter Notebook extension leveraging pandas DataFrames.."
+    github_id: CermakM/jupyter-datatables
+    pypi_id: jupyter-datatables
+    category: widgets
+  - name: Altair Viewer
+    show: True
+    description: "Viewer for Altair and Vega-Lite visualizations."
+    github_id: altair-viz/altair_viewer
+    pypi_id: altair_viewer
+    category: widgets
+  # Jupyter Extensions
+  - name: HTTP-over-WebSocket
+    show: True
+    description: "Jupyter support for HTTP-over-ws."
+    pypi_id: jupyter_http_over_ws
+    github_id: googlecolab/jupyter_http_over_ws
+    category: jupyter-extensions
+  - name: Jupyter Black
+    show: True
+    description: "Black formatter for Jupyter Notebook."
+    github_id: drillan/jupyter-black
+    show: True
+    category: jupyter-extensions
+  - name: PPExtensions
+    show: True
+    description: "Set of iPython and Jupyter extensions to improve user.."
+    pypi_id: ppextensions
+    github_id: paypal/PPExtensions
+    category: jupyter-extensions
+  - name: nbgrader
+    show: True
+    description: "A system for assigning and grading notebooks."
+    pypi_id: nbgrader
+    github_id: jupyter/nbgrader
+    conda_id: conda-forge/nbgrader
+    category: jupyter-extensions
+  - name: jupyter-tensorboard
+    show: True
+    description: "Start Tensorboard in Jupyter Notebook."
+    pypi_id: jupyter-tensorboard
+    github_id: lspvic/jupyter_tensorboard
+    category: jupyter-extensions
+  - name: Resource Usage
+    show: True
+    description: "Jupyter Notebook Extension for monitoring your own Resource.."
+    pypi_id: jupyter-resource-usage
+    github_id: jupyter-server/jupyter-resource-usage
+    conda_id: conda-forge/nbresuse
+    category: jupyter-extensions
+  - name: jupyter-server-proxy
+    show: True
+    description: "Jupyter notebook server extension to proxy web services."
+    pypi_id: jupyter-server-proxy
+    github_id: jupyterhub/jupyter-server-proxy
+    conda_id: conda-forge/jupyter-server-proxy
+    category: jupyter-extensions
+  - name: Contrib NBextensions
+    show: True
+    description: "A collection of various notebook extensions for Jupyter."
+    pypi_id: jupyter_contrib_nbextensions
+    github_id: ipython-contrib/jupyter_contrib_nbextensions
+    category: jupyter-extensions
+  - name: NBextensions Configurator
+    show: True
+    pypi_id: jupyter_nbextensions_configurator
+    github_id: jupyter-contrib/jupyter_nbextensions_configurator
+    category: jupyter-extensions
+  - name: nbgitpuller
+    show: True
+    description: "Jupyter server extension to sync a git repository one-way to a.."
+    pypi_id: nbgitpuller
+    github_id: jupyterhub/nbgitpuller
+    conda_id: conda-forge/nbgitpuller
+    category: jupyter-extensions
+  - name: Jupyter Themes
+    show: True
+    pypi_id: jupyterthemes
+    github_id: dunovank/jupyter-themes
+    category: jupyter-extensions
+  - name: Jupyter Spark
+    show: True
+    description: "Jupyter Notebook extension for Apache Spark integration."
+    pypi_id: jupyter-spark
+    github_id: mozilla/jupyter-spark
+    category: jupyter-extensions
+  - name: Rsession Proxy
+    show: True
+    description: "Jupyter extensions for running an RStudio rsession proxy."
+    pypi_id: jupyter-rsession-proxy
+    github_id: jupyterhub/jupyter-rsession-proxy
+    category: jupyter-extensions
+  - name: Appmode
+    show: True
+    description: "A Jupyter extensions that turns notebooks into web applications."
+    pypi_id: appmode
+    conda_id: conda-forge/appmode
+    github_id: oschuett/appmode
+    category: jupyter-extensions
+  - name: Spark Monitor
+    show: True
+    description: "Monitor Apache Spark from Jupyter Notebook."
+    pypi_id: sparkmonitor
+    dockerhub_id: krishnanr/sparkmonitor
+    github_id: krishnan-r/sparkmonitor
+    category: jupyter-extensions
+  # JupyterLab Renderer
+  - name: JupyterLab Voyager
+    show: True
+    github_id: altair-viz/jupyterlab_voyager
+    npm_id: jupyterlab_voyager
+    category: lab-renderer
+  - name: JupyterLab Spreadsheet
+    show: True
+    description: "JupyterLab plugin for viewing spreadsheets, such as.."
+    github_id: quigleyj97/jupyterlab-spreadsheet
+    npm_id: "jupyterlab-spreadsheet"
+    category: lab-renderer
+  - name: JupyterLab Renderers
+    show: True
+    description: "Renderers and renderer extensions for JupyterLab."
+    github_id: jupyterlab/jupyter-renderers
+    npm_id: "@jupyterlab/geojson-extension"
+    category: lab-renderer
+  - name: JupyterLab Latex
+    show: True
+    description: "JupyterLab extension for live editing of LaTeX documents."
+    github_id: jupyterlab/jupyterlab-latex
+    pypi_id: jupyterlab_latex
+    npm_id: "@jupyterlab/latex"
+    category: lab-renderer
+  - name: JupyterLab Chart Editor
+    show: True
+    description: "JupyterLab extension for Plotly's react-chart-editor."
+    github_id: plotly/jupyterlab-chart-editor
+    npm_id: jupyterlab-chart-editor
+    category: lab-renderer
+  - name: JupyterLab Drawio
+    show: True
+    description: "A standalone embedding of the FOSS drawio / mxgraph package.."
+    github_id: QuantStack/jupyterlab-drawio
+    npm_id: jupyterlab-drawio
+    category: lab-renderer
+  - name: JupyterLab Dash
+    show: True
+    github_id: plotly/jupyterlab-dash
+    pypi_id: jupyterlab-dash
+    npm_id: jupyterlab-dash
+    category: lab-renderer
+  # JupyterLab Themes
+  - name: Material Darker Theme
+    show: True
+    description: "The Material Darker theme for JupyterLab."
+    github_id: oriolmirosa/jupyterlab_materialdarker
+    npm_id: "@oriolmirosa/jupyterlab_materialdarker"
+    category: lab-themes
+  - name: Darcula Theme
+    show: True
+    github_id: telamonian/theme-darcula
+    npm_id: "@telamonian/theme-darcula"
+    category: lab-themes
+  - name: Gruvbox Theme
+    show: True
+    description: "Gruvbox dark theme for Jupyter Lab. Modeled on classic.."
+    github_id: Rahlir/theme-gruvbox
+    npm_id: "@rahlir/theme-gruvbox"
+    category: lab-themes
+  - name: Neon Theme
+    show: True
+    description: "A flat, 80's neon inspired theme for JupyterLab."
+    github_id: yeebc/jupyterlab-neon-theme
+    npm_id: "@yeebc/jupyterlab_neon_theme"
+    category: lab-themes
+  - name: Nord Theme
+    show: True
+    description: "JupyterLab - Nord Theme."
+    github_id: kenshohara/theme-nord-extension
+    npm_id: "@kenshohara/theme-nord-extension"
+    category: lab-themes
+  - name: Horizon Theme
+    show: True
+    description: "VSCode Horizon Theme port for JupyterLab."
+    github_id: mohirio/jupyterlab-horizon-theme
+    npm_id: "@mohirio/jupyterlab-horizon-theme"
+    category: lab-themes
+  - name: Theme Toggle
+    show: True
+    github_id: jtpio/jupyterlab-theme-toggle
+    npm_id: "jupyterlab-theme-toggle"
+    category: lab-themes
+  # JupyterLab Extensions
+  - name: JupyterLab Debugger
+    show: True
+    description: "A visual debugger for Jupyter notebooks, consoles, and.."
+    github_id: jupyterlab/debugger
+    npm_id: "@jupyterlab/debugger"
+    category: lab-extensions
+  - name: JupyterLab Kernelspy
+    show: True
+    description: "A Jupyter Lab extension for inspecting messages to/from.."
+    github_id: jupyterlab-contrib/jupyterlab-kernelspy
+    npm_id: jupyterlab-kernelspy
+    category: lab-extensions
+  - name: JupyterLab Python Files
+    show: True
+    description: "JupyterLab extension to create Python files."
+    github_id: jtpio/jupyterlab-python-file
+    npm_id: jupyterlab-python-file
+    category: lab-extensions
+  - name: JupyterLab Shortcutui
+    show: True
+    description: "A JupyterLab extension for managing keyboard shortcuts."
+    github_id: jupyterlab/jupyterlab-shortcutui
+    npm_id: "@jupyterlab/shortcutui"
+    category: lab-extensions
+  - name: GPU Dashboards
+    show: True
+    description: "A JupyterLab extension for displaying dashboards of GPU.."
+    github_id: rapidsai/jupyterlab-nvdashboard
+    pypi_id: jupyterlab-nvdashboard
+    npm_id: jupyterlab-nvdashboard
+    category: lab-extensions
+  - name: JupyterLab System Monitor
+    show: True
+    description: "JupyterLab extension to display system metrics."
+    github_id: jtpio/jupyterlab-system-monitor
+    npm_id: jupyterlab-system-monitor
+    category: lab-extensions
+  - name: KnowledgeLab
+    show: True
+    description: "KnowledgeRepo + JupyterLab."
+    github_id: timkpaine/knowledgelab
+    pypi_id: knowledgelab
+    npm_id: knowledgelab
+    category: lab-extensions
+  - name: JupyterLab Autoversion
+    show: True
+    description: "Automatically version jupyter notebooks in JupyterLab."
+    github_id: timkpaine/jupyterlab_autoversion
+    pypi_id: jupyterlab_autoversion
+    npm_id: jupyterlab_autoversion
+    category: lab-extensions
+  - name: JupyterLab Email
+    show: True
+    description: "A jupyterlab extension to email notebooks directly from.."
+    github_id: timkpaine/jupyterlab_email
+    pypi_id: jupyterlab_email
+    npm_id: jupyterlab_email
+    category: lab-extensions
+  - name: JupyterLab Bytecode
+    show: True
+    description: "JupyterLab extension to explore CPython Bytecode."
+    github_id: jtpio/jupyterlab-python-bytecode
+    npm_id: jupyterlab-python-bytecode
+    category: lab-extensions
+  - name: JupyterLab Flake8
+    show: True
+    description: "A jupyterlab extension to email notebooks directly from.."
+    github_id: timkpaine/jupyterlab_email
+    npm_id: jupyterlab-flake8
+    category: lab-extensions
+  - name: JupyterLab Quickopen
+    show: True
+    description: "Quickly open a file in JupyterLab by typing part of its.."
+    github_id: parente/jupyterlab-quickopen
+    pypi_id: jupyterlab-quickopen
+    npm_id: "@parente/jupyterlab-quickopen"
+    category: lab-extensions
+  - name: JupyterLab Vim
+    show: True
+    description: "Vim notebook cell bindings for JupyterLab."
+    github_id: jwkvam/jupyterlab-vim
+    npm_id: jupyterlab_vim
+    category: lab-extensions
+  - name: JupyterLab Git
+    show: True
+    description: "A Git extension for JupyterLab."
+    github_id: jupyterlab/jupyterlab-git
+    pypi_id: jupyterlab-git
+    conda_id: conda-forge/jupyterlab-git
+    category: lab-extensions
+  - name: JupyterLab TOC
+    show: True
+    github_id: jupyterlab/jupyterlab-toc
+    npm_id: "@jupyterlab/toc"
+    category: lab-extensions
+  - name: Variable Inspector
+    show: True
+    description: "Variable Inspector extension for Jupyterlab."
+    github_id: lckr/jupyterlab-variableInspector
+    npm_id: "@lckr/jupyterlab_variableinspector"
+    category: lab-extensions
+  - name: JupyterLab Google Drive
+    show: True
+    description: "Cloud storage for JupyterLab using Google Drive."
+    github_id: jupyterlab/jupyterlab-google-drive
+    npm_id: "@jupyterlab/google-drive"
+    category: lab-extensions
+  - name: JupyterLab SQL
+    show: True
+    description: "SQL GUI for JupyterLab."
+    github_id: pbugnion/jupyterlab-sql
+    pypi_id: jupyterlab_sql
+    category: lab-extensions
+  - name: JupyterLab Go-To-Definition
+    show: True
+    description: "Navigate to variable's definition with a click in.."
+    github_id: krassowski/jupyterlab-go-to-definition
+    npm_id: "@krassowski/jupyterlab_go_to_definition"
+    category: lab-extensions
+  - name: JupyterLab Spark
+    show: True
+    description: "Spark Application UI extension for JupyterLab."
+    github_id: manuzhang/jupyterlab_spark
+    npm_id: jupyterlab_spark
+    category: lab-extensions
+  - name: JupyterLab GitHub
+    show: True
+    github_id: jupyterlab/jupyterlab-github
+    npm_id: "@jupyterlab/github"
+    pypi_id: jupyterlab-github
+    category: lab-extensions
+  - name: Code Formatter
+    show: True
+    description: "A universal code formatter for JupyterLab."
+    github_id: ryantam626/jupyterlab_code_formatter
+    pypi_id: jupyterlab_code_formatter
+    npm_id: "@ryantam626/jupyterlab_code_formatter"
+    category: lab-extensions
+  - name: JupyterLab Spellchecker
+    show: True
+    description: "Spellchecker for JupyterLab notebook markdown cells.."
+    github_id: ijmbarr/jupyterlab_spellchecker
+    npm_id: "@ijmbarr/jupyterlab_spellchecker"
+    category: lab-extensions
+  - name: Lantern
+    show: True
+    description: "Data exploration glue."
+    github_id: timkpaine/lantern
+    pypi_id: pylantern
+    category: lab-extensions
+  - name: JupyterLab IFrame
+    show: True
+    description: "JupyterLab iframe widget."
+    github_id: timkpaine/jupyterlab_iframe
+    pypi_id: jupyterlab_iframe
+    npm_id: jupyterlab_iframe
+    category: lab-extensions
+  - name: JupyterLab Tensorboard
+    show: True
+    description: "Tensorboard extension for jupyterlab."
+    github_id: chaoleili/jupyterlab_tensorboard
+    npm_id: jupyterlab_tensorboard
+    category: lab-extensions
+  - name: nbgather
+    show: True
+    description: "Spit shine for Jupyter notebooks."
+    github_id: microsoft/gather
+    npm_id: nbgather
+    category: lab-extensions
+  - name: JupyterLab Data Explorer
+    show: True
+    description: "First class datasets in JupyterLab."
+    github_id: jupyterlab/jupyterlab-data-explorer
+    npm_id: "@jupyterlab/dataregistry-extension"
+    category: lab-extensions
+  - name: JupyterLab LSP
+    show: True
+    description: "Coding assistance for JupyterLab (code navigation + hover.."
+    github_id: krassowski/jupyterlab-lsp
+    npm_id: "@krassowski/jupyterlab-lsp"
+    category: lab-extensions
+  - name: JupyterLab Top Bar
+    show: True
+    description: "JupyterLab Top Bar extension."
+    github_id: jtpio/jupyterlab-topbar
+    npm_id: "jupyterlab-topbar-extension"
+    category: lab-extensions
+  - name: Jupyter Bokeh
+    show: True
+    description: "An extension for rendering Bokeh content in JupyterLab notebooks."
+    github_id: bokeh/jupyter_bokeh
+    pypi_id: jupyter-bokeh
+    npm_id: "@bokeh/jupyter_bokeh"
+    # jupyterlab_bokeh
+    category: lab-extensions
+  - name: JupyterLab Commenting
+    show: True
+    description: "Commenting and annotation for JupyterLab."
+    github_id: jupyterlab/jupyterlab-commenting
+    npm_id: "@jupyterlab/commenting-extension"
+    category: lab-extensions
+  - name: JupyterLab HDF5
+    show: True
+    description: "Open and explore HDF5 files in JupyterLab. Can handle very.."
+    github_id: jupyterlab/jupyterlab-hdf5
+    npm_id: "@jupyterlab/hdf5"
+    pypi_id: jupyterlab_hdf
+    category: lab-extensions
+  - name: JupyterLab SideCar
+    show: True
+    description: "A sidecar output widget for JupyterLab."
+    github_id: jupyter-widgets/jupyterlab-sidecar
+    npm_id: "@jupyter-widgets/jupyterlab-sidecar"
+    pypi_id: sidecar
+    category: lab-extensions
+  - name: Collapsible Headings
+    show: True
+    description: "Implements Collapsible Headers for Jupyter Lab Notebooks."
+    github_id: aquirdTurtle/Collapsible_Headings
+    npm_id: "@aquirdturtle/collapsible_headings"
+    category: lab-extensions
+  - name: ipython
+    show: True
+    github_id: ipython/ipython
+    pypi_id: ipython
+    conda_id: conda-forge/ipython
+    category: components
+  - name: nikola
+    show: True
+    description: "A static website and blog generator."
+    github_id: getnikola/nikola
+    category: notebook-sharing
+    pypi_id: nikola
+  - name: sos
+    show: True
+    description: "SoS workflow system for daily data analysis."
+    github_id: vatlab/SOS
+    category: notebook-environments
+  - name: ipycanvas
+    show: True
+    description: "Interactive Canvas in Jupyter."
+    github_id: martinRenou/ipycanvas
+    category: widgets
+    pypi_id: ipycanvas
+    conda_id: conda-forge/ipycanvas
+  - name: jupyter-dash
+    show: True
+    description: "Develop Dash apps in the Jupyter Notebook and JupyterLab."
+    github_id: plotly/jupyter-dash
+    category: widgets
+    pypi_id: jupyter-dash
+  - name: pick
+    show: True
+    description: "Customize your kernels on Launch!."
+    github_id: nteract/pick
+    category: magic
+    pypi_id: pick
+  - name: elyra
+    show: True
+    description: "Elyra extends JupyterLab Notebooks with an AI centric approach."
+    github_id: elyra-ai/elyra
+    category: lab-extensions
+    pypi_id: elyra
+    conda_id: conda-forge/elyra
+  - name: ipycytoscape
+    show: True
+    description: "A Cytoscape Jupyter widget."
+    github_id: QuantStack/ipycytoscape
+    category: widgets
+    conda_id: conda-forge/ipycytoscape
+  - name: pyforest
+    show: True
+    description: "pyforest - feel the bliss of automated imports."
+    github_id: 8080labs/pyforest
+    category: jupyter-extensions
+    pypi_id: pyforest
+  - name: mkdocs-jupyter
+    show: True
+    description: "Use Jupyter Notebook in mkdocs."
+    github_id: danielfrg/mkdocs-jupyter
+    category: notebook-sharing
+    pypi_id: mkdocs-jupyter
+  - name: nbQA
+    show: True
+    description: "Run any standard Python code quality tool on a Jupyter Notebook."
+    github_id: nbQA-dev/nbQA
+    category: notebook-tools
+    pypi_id: nbqa
+  - name: colabcode
+    show: True
+    description: "Run VSCode (codeserver) on Google Colab or Kaggle Notebooks."
+    github_id: abhishekkrthakur/colabcode
+    pypi_id: colabcode
+  - name: nb_conda_kernels
+    show: True
+    github_id: Anaconda-Platform/nb_conda_kernels
+    category: kernels
+    conda_id: conda-forge/nb_conda_kernels
+    license: BSD-3-Clause
+  - name: bookstore
+    show: True
+    description: "Notebook storage and publishing workflows for the masses."
+    github_id: nteract/bookstore
+    category: notebook-sharing
+    pypi_id: bookstore
+  - name: nbzip
+    show: True
+    description: "Zips and downloads all the contents of a jupyter notebook."
+    github_id: data-8/nbzip
+    category: jupyter-extensions
+    pypi_id: nbzip
+  - name: nbopen
+    show: True
+    github_id: takluyver/nbopen
+    category: notebook-tools
+    license: BSD-3-Clause
+    pypi_id: nbopen
+  - name: jupyter-archive
+    show: True
+    description: "A Jupyter/Jupyterlab extension to make, download and extract.."
+    github_id: jupyterlab-contrib/jupyter-archive
+    category: jupyter-extensions
+    conda_id: conda-forge/jupyter-archive
+  - name: gpu-jupyter
+    show: True
+    description: "Leverage the flexibility of Jupyterlab through the power of your.."
+    github_id: iot-salzburg/gpu-jupyter
+    category: notebook-environments
+  - name: gator
+    show: True
+    description: "Conda environment and package management extension from within Jupyter."
+    github_id: mamba-org/gator
+    conda_id: conda-forge/mamba_gator
+    npm_id: "@mamba-org/gator-lab"
+    license: BSD-3-Clause
+    category: jupyter-extensions
+  - name: nb_conda
+    show: True
+    github_id: Anaconda-Platform/nb_conda
+    license: BSD-3-Clause
+    category: jupyter-extensions
+    conda_id: conda-forge/nb_conda
+  - name: jupyter-flex
+    show: True
+    description: "Build dashboards using Jupyter Notebooks."
+    github_id: danielfrg/jupyter-flex
+    category: notebook-sharing
+  - name: easyexplore
+    show: True
+    description: "Toolbox for easy and effective data exploration in Python."
+    github_id: GianniBalistreri/easyexplore
+    category: widgets
+    pypi_id: easyexplore
+  - name: xeus-sqlite
+    show: True
+    description: "Jupyter kernel for SQLite."
+    github_id: jupyter-xeus/xeus-sqlite
+    category: kernels
+  - name: naas
+    show: True
+    description: "Schedule notebooks, run them like APIs, expose securely your assets:.."
+    github_id: jupyter-naas/naas
+    category: notebook-tools
+    pypi_id: naas
+  - name: testbook
+    show: True
+    description: "Unit test your Jupyter Notebooks the right way."
+    github_id: nteract/testbook
+    category: notebook-tools
+  - name: evidently
+    show: True
+    description: "Interactive reports to analyze machine learning models during.."
+    github_id: evidentlyai/evidently
+    category: widgets
+  - name: Content Management
+    show: True
+    description: "Jupyter Content Management Extensions."
+    github_id: jupyter-incubator/contentmanagement
+    pypi_id: jupyter_cms
+    conda_id: conda-forge/jupyter_cms
+    category: jupyter-extensions
+    license: BSD-3-Clause
+  - name: kernel-relay
+    show: True
+    description: "kernel-relay is a GraphQL service for interfacing with.."
+    github_id: nteract/kernel-relay
+    category: kernels
+  - name: jupyterterminals
+    show: True
+    description: "Jupyter plugin to support inline terminal shells along with.."
+    github_id: willkessler/jupyterterminals
+    category: jupyter-extensions
+  - name: ssh_ipykernel
+    show: True
+    github_id: bernhard-42/ssh_ipykernel
+    category: kernels
+  - name: Kernel Detection
+    show: True
+    description: "An Jupyter plugin to enable the automatic detection of.."
+    pypi_id: environment_kernels
+    github_id: Cadair/jupyter_environment_kernels
+    category: kernels
+  - name: dask-labextension
+    show: True
+    description: "JupyterLab extension for Dask."
+    github_id: dask/dask-labextension
+    category: lab-extensions
+    pypi_id: dask-labextension
+    conda_id: conda-forge/dask-labextension
+    npm_id: dask-labextension
+  - name: jupyterlab-execute-time
+    show: True
+    description: "Execute Time Plugin for Jupyter Lab."
+    github_id: deshaw/jupyterlab-execute-time
+    category: lab-extensions
+    npm_id: jupyterlab-execute-time
+  - name: jupyterlab-sos
+    show: True
+    description: "Jupyterlab extension for SoS Polyglot Notebook and Workflow.."
+    github_id: vatlab/jupyterlab-sos
+    category: lab-extensions
+    conda_id: conda-forge/jupyterlab-sos
+    npm_id: jupyterlab-sos
+  - name: jupyterlab_commands
+    show: True
+    github_id: timkpaine/jupyterlab_commands
+    category: lab-extensions
+  - name: notedown
+    show: True
+    github_id: aaren/notedown
+    category: notebook-sharing
+    pypi_id: notedown
+    conda_id: conda-forge/notedown
+  - name: docker-python
+    show: True
+    description: "Kaggle Python docker image."
+    github_id: kaggle/docker-python
+    category: notebook-environments
+    dockerhub_id: kaggle/python
+  - name: JupyterLab Templates
+    show: True
+    description: "Support for jupyter notebook templates in jupyterlab."
+    github_id: jpmorganchase/jupyterlab_templates
+    category: lab-extensions
+    pypi_id: jupyterlab_templates
+    npm_id: jupyterlab_templates
+  - name: nbmake-action
+    show: True
+    description: "GitHub Action for testing notebooks."
+    github_id: treebeardtech/nbmake-action
+    category: notebook-tools
+  - name: nbtutor
+    show: True
+    description: "Visualize Python code execution (line-by-line) in Jupyter Notebook cells."
+    github_id: lgpage/nbtutor
+    category: widgets
+    conda_id: conda-forge/nbtutor
+  - name: bokeh
+    show: True
+    description: "Interactive Data Visualization in the browser, from Python."
+    github_id: bokeh/bokeh
+    pypi_id: bokeh
+    conda_id: conda-forge/bokeh
+    category: widgets
+  - name: jupyterlab-celltags
+    show: True
+    description: "A JupyterLab extension for notebook cell tags."
+    github_id: jupyterlab/jupyterlab-celltags
+    category: lab-extensions
+  - name: pynb
+    show: True
+    description: "Jupyter Notebooks as plain Python code with embedded Markdown text."
+    github_id: elehcimd/pynb
+    category: notebook-sharing
+  - name: jupyter-nbrequirements
+    show: True
+    description: "Dependency management and optimization in Jupyter.."
+    github_id: thoth-station/jupyter-nbrequirements
+    category: jupyter-extensions
+  - name: jupyter-manim
+    show: True
+    description: "manim cell magic for IPython/Jupyter to show the output video."
+    github_id: krassowski/jupyter-manim
+    category: magic
+  - name: dummyauthenticator
+    show: True
+    description: "A Dummy JupyterHub Authenticator to make testing easy."
+    github_id: jupyterhub/dummyauthenticator
+    pypi_id: jupyterhub-dummyauthenticator
+    category: hub-auth
+  - name: Remote User Auth
+    show: True
+    description: "REMOTE_USER authenticator for Jupyterhub."
+    github_id: cwaldbieser/jhub_remote_user_authenticator
+    pypi_id: jhub_remote_user_authenticator
+    category: hub-auth
+  - name: Hash Authenticator
+    show: True
+    description: "Authenticate users with passwords generated from their.."
+    github_id: thedataincubator/jupyterhub-hashauthenticator
+    pypi_id: jupyterhub-hashauthenticator
+    category: hub-auth
+  - name: jnotebook-reader
+    show: True
+    description: "An awesome viewer to browse and render Jupyter.."
+    github_id: line/jnotebook_reader
+    category: notebook-sharing
+  - name: What-If Tool
+    show: True
+    description: "Source code/webpage/demos for the What-If Tool."
+    github_id: PAIR-code/what-if-tool
+    npm_id: wit-widget
+    pypi_id: witwidget
+    category: widgets
+  - name: Perspective
+    show: True
+    description: "Streaming pivot visualization via WebAssembly."
+    github_id: finos/perspective
+    pypi_id: perspective-python
+    npm_id: "@finos/perspective-jupyterlab"
+    category: lab-extensions
+  - name: best-of-ml-python - Data Visualization
+    show: True
+    description: Python-based data visualization libraries
+    homepage: https://github.com/ml-tooling/best-of-ml-python#data-visualization
+    resource: True
+    category: widgets
+  - name: jupyter-console
+    show: True
+    description: "Jupyter Terminal Console."
+    github_id: jupyter/jupyter_console
+    category: others
+    pypi_id: jupyter-console
+  - name: qtconsole
+    show: True
+    github_id: jupyter/qtconsole
+    category: others
+    conda_id: conda-forge/qtconsole
+    pypi_id: qtconsole
+  - name: jupyter-packaging
+    show: True
+    description: "Tools to help build and install Jupyter Python packages."
+    github_id: jupyter/jupyter-packaging
+    category: components
+    pypi_id: jupyter-packaging
+    conda_id: conda-forge/jupyter-packaging
+  - name: jupyter_server
+    show: True
+    github_id: jupyter-server/jupyter_server
+    category: components
+    pypi_id: jupyter_server
+    conda_id: conda-forge/jupyter_server
+  - name: jupyterlab-flake8
+    show: True
+    description: "Jupyterlab python linter for notebooks and text files.."
+    github_id: mlshapiro/jupyterlab-flake8
+    category: lab-extensions
+    npm_id: "jupyterlab-flake8"
+  - name: jupyterlab-sparkmonitor
+    show: True
+    description: "JupyterLab extension that enables monitoring launched.."
+    github_id: itsjafer/jupyterlab-sparkmonitor
+    category: lab-extensions
+    dockerhub_id: "itsjafer/sparkmonitor"
+    npm_id: "jupyterlab_sparkmonitor"
+    pypi_id: jupyterlab-sparkmonitor
+  - name: jupyterlab-gitplus
+    show: True
+    description: "JupyterLab extension to create GitHub commits & pull.."
+    github_id: ReviewNB/jupyterlab-gitplus
+    category: lab-extensions
+    npm_id: "@reviewnb/jupyterlab_gitplus"
+    pypi_id: jupyterlab_gitplus
+  - name: jupyter-fs
+    show: True
+    description: "A filesystem-like contents manager for multiple backends in Jupyter."
+    github_id: jpmorganchase/jupyter-fs
+    category: lab-extensions
+    pypi_id: jupyter-fs
+  - name: ipylab
+    show: True
+    description: "Control JupyterLab from Python Notebooks with Jupyter Widgets."
+    github_id: jtpio/ipylab
+    category: lab-extensions
+    pypi_id: ipylab
+    conda_id: conda-forge/ipylab
+  - name: nbcelltests
+    show: True
+    description: "Cell-by-cell testing for production Jupyter notebooks in.."
+    github_id: jpmorganchase/nbcelltests
+    category: lab-extensions
+    npm_id: jupyterlab_celltests
+    pypi_id: nbcelltests
+  - name: jupyterlab-theme-solarized-dark
+    show: True
+    description: "JupyterLab 2.x Solarized Dark extension."
+    github_id: AllanChain/jupyterlab-theme-solarized-dark
+    category: lab-themes
+    npm_id: "jupyterlab-theme-solarized-dark"
+    pypi_id: jupyterlab_theme_solarized_dark
+  - name: jupyterlab-classic
+    show: True
+    description: "The next-gen old-school notebook UI."
+    github_id: jtpio/jupyterlab-classic
+    category: notebook-environments
+    pypi_id: jupyterlab-classic
+  - name: cdsdashboards
+    show: True
+    description: "JupyterHub extension for ContainDS Dashboards."
+    github_id: ideonate/cdsdashboards
+    category: notebook-sharing
+    pypi_id: cdsdashboards
+    conda_id: conda-forge/cdsdashboards
+  - name: Jupter-Notebook-REST-API
+    show: True
+    description: "Run your jupyter notebooks as a REST API endpoint..."
+    github_id: Invictify/Jupter-Notebook-REST-API
+    category: notebook-tools
+  - name: nbformat
+    show: True
+    description: "Reference implementation of the Jupyter Notebook format."
+    github_id: jupyter/nbformat
+    category: notebook-tools
+    pypi_id: nbformat
+    conda_id: conda-forge/nbformat
+  - name: nbclient
+    show: True
+    description: "A client library for executing notebooks. Formally nbconvert's.."
+    github_id: jupyter/nbclient
+    category: notebook-tools
+    pypi_id: nbclient
+    conda_id: conda-forge/nbclient
+  - name: itables
+    show: True
+    description: "Interactive Tables in Jupyter."
+    github_id: mwouts/itables
+    category: widgets
+    pypi_id: itables
+  - name: jdaviz
+    show: True
+    description: "JWST astronomical data analysis tools in the Jupyter platform."
+    github_id: spacetelescope/jdaviz
+    category: widgets
+    pypi_id: jdaviz
+  - name: ipyregulartable
+    show: True
+    description: "High performance, editable, stylable datagrids in jupyter.."
+    github_id: jpmorganchase/ipyregulartable
+    category: widgets
+    npm_id: "@jupyter-widgets/jupyterlab-manager"
+    pypi_id: ipyregulartable
+  - name: ipydagred3
+    show: True
+    description: "ipywidgets library for drawing directed acyclic graphs in.."
+    github_id: timkpaine/ipydagred3
+    category: widgets
+    npm_id: "@jupyter-widgets/jupyterlab-manager"
+    pypi_id: ipydagred3
+  - name: ipyannotate
+    show: True
+    description: "Jupyter Widget for data annotation."
+    github_id: ipyannotate/ipyannotate
+    category: widgets
+    npm_id: ipyannotate
+    pypi_id: ipyannotate
+  - name: ipyvue
+    show: True
+    description: "Jupyter widgets base for Vue libraries."
+    github_id: mariobuikhuizen/ipyvue
+    category: widgets
+    pypi_id: ipyvue
+    conda_id: conda-forge/ipyvue
+  - name: ipyvuetify
+    show: True
+    description: "Jupyter widgets based on vuetify UI components."
+    github_id: mariobuikhuizen/ipyvuetify
+    category: widgets
+    pypi_id: ipyvuetify
+    conda_id: conda-forge/ipyvuetify
+  - name: ipydatawidgets
+    show: True
+    description: "A set of widgets to help facilitate reuse of large datasets.."
+    github_id: vidartf/ipydatawidgets
+    category: widgets
+    pypi_id: ipydatawidgets
+    conda_id: conda-forge/ipydatawidgets
+  - name: ipyscales
+    show: True
+    description: "A widget library for scales."
+    github_id: vidartf/ipyscales
+    category: widgets
+    pypi_id: ipyscales
+    conda_id: conda-forge/ipyscales
+  - name: D-Tale
+    show: True
+    description: "Visualizer for Pandas Data Structures" 
+    pypi_id: dtale
+    github_id: man-group/dtale
+    category: widgets
+    conda_id: conda-forge/dtale
+  - name: VSCode Jupyter
+    show: True
+    github_id: microsoft/vscode-jupyter
+    category: notebook-environments
+  - name: jupyterlab-executor
+    show: True
+    description: "JupyterLab extension to execute the scripts from the.."
+    description: "JupyterLab extension to execute the scripts from the file browser"
+    github_id: gavincyi/jupyterlab-executor
+    category: lab-extensions
+    pypi_id: jupyterlab-executor
+    npm_id: "@gavincyi/jupyterlab-executor"    
