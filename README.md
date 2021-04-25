@@ -202,7 +202,7 @@ _Development environments with support for Jupyter Notebooks._
 </details>
 <details><summary><b><a href="https://github.com/microsoft/vscode-jupyter">VSCode Jupyter</a></b> (🥉16 ·  ⭐ 260) - VS Code Jupyter extension. <code>❗Unlicensed</code></summary>
 
-- [GitHub](https://github.com/microsoft/vscode-jupyter) (👨‍💻 230 · 🔀 48 · 📦 14 · 📋 4.8K - 19% open · ⏱️ 24.04.2021):
+- [GitHub](https://github.com/microsoft/vscode-jupyter) (👨‍💻 230 · 🔀 49 · 📦 14 · 📋 4.8K - 19% open · ⏱️ 24.04.2021):
 
 	```
 	git clone https://github.com/microsoft/vscode-jupyter
