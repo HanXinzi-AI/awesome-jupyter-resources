@@ -1,4 +1,4 @@
-name: update-python-resorces
+name: update-jupyter-resources
 
 on:
   workflow_dispatch:
